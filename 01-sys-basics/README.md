@@ -126,6 +126,18 @@ output
 ```
 /usr/bin/python3
 ```
+We can monkey patch modules loaded in memory with `sys.modules`.
+```python
+import sys
+import requests
 
+def fakeFunction(url, data=None, **kwargs):
+    # example
 
+sys.modules['requests'].post = fakeFunction
+```
+output
+```
+
+```
 
