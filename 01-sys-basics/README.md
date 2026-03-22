@@ -79,6 +79,41 @@ output
 ```
 3.13.3 (main, Jan  8 2026, 12:03:54) [GCC 14.2.0]
 ```
+---
+We can check the details in tuple format.
+```python
+import sys
+
+print(sys.version_info)
+```
+output
+```
+sys.version_info(major=3, minor=13, micro=3, releaselevel='final', serial=0)
+```
+---
+We can access these values by index or attribute.
+```python
+print(sys.version_info.major)
+print(sys.version_info[0])
+```
+output
+```
+3
+3
+```
+---
+Maybe we want a version lower than 3.8.5 for our exploit to work.
+```python
+import sys
+
+v = sys.version_info
+
+if v.major == 3 and v.minor == 8 and v.micro < 5:
+    print("Exploit can run")
+else:
+    print("Exploit can't run")
+```
+
 
 
 
