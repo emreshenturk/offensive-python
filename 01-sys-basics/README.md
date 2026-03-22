@@ -21,7 +21,7 @@ output
 
 ---
 
-We can catch this if an argument is missing.
+We can handle this case if an argument is missing.
 
 ```python
 import sys
@@ -47,9 +47,11 @@ file.py needs 3 arguments.
 ```
 ---
 
-We can print which platform we are on.
+We can print the platform we are on.
 
 ```python
+import sys
+
 print(sys.platform)
 ```
 output
@@ -69,6 +71,8 @@ linux
 ---
 We can check the version.
 ```python
+import sys
+
 print(sys.version)
 ```
 output
@@ -78,6 +82,8 @@ output
 ---
 We can check the details in tuple format.
 ```python
+import sys
+
 print(sys.version_info)
 ```
 output
@@ -87,6 +93,8 @@ sys.version_info(major=3, minor=13, micro=3, releaselevel='final', serial=0)
 ---
 We can access these values by index or attribute.
 ```python
+import sys
+
 print(sys.version_info.major)
 print(sys.version_info[0])
 ```
@@ -96,7 +104,7 @@ output
 3
 ```
 ---
-Maybe we want a version lower than 3.8.5 for our exploit to work.
+We may need a version lower than 3.8.5 for our exploit to work.
 ```python
 import sys
 
@@ -108,8 +116,10 @@ else:
     print("Exploit can't run")
 ```
 ---
-We can check which interpreter run out script.
+We can check which interpreter runs our script.
 ```python
+import sys
+
 print(sys.executable)
 ```
 output
