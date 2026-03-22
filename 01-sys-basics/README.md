@@ -50,8 +50,6 @@ file.py needs 3 arguments.
 We can print which platform we are on.
 
 ```python
-import sys
-
 print(sys.platform)
 ```
 output
@@ -71,8 +69,6 @@ linux
 ---
 We can check the version.
 ```python
-import sys
-
 print(sys.version)
 ```
 output
@@ -82,8 +78,6 @@ output
 ---
 We can check the details in tuple format.
 ```python
-import sys
-
 print(sys.version_info)
 ```
 output
@@ -113,7 +107,15 @@ if v.major == 3 and v.minor == 8 and v.micro < 5:
 else:
     print("Exploit can't run")
 ```
-
+---
+We can check which interpreter run out script.
+```python
+print(sys.executable)
+```
+output
+```
+/usr/bin/python3
+```
 
 
 
